@@ -98,7 +98,7 @@ Install package requirements
 ----------------------------
 1. Run ``npm install`` in the root of the repo
 
-Watch for file changes, run grunt from the root of the repo  
+Watch for file changes, run grunt from the root of the repo. This will lint and run tests.  
 ``` bash
 $ grunt watch
 ```

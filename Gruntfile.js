@@ -34,12 +34,21 @@ module.exports = function(grunt) {
                 ,globalstrict: true
             },
             uses_defaults: file_list.concat(['Gruntfile.js'])
-        },
+        }
 
-        watch: {
+        ,vows: {
+          all: {
+            options: {
+              reporter: 'spec'
+            },
+            src: ['test/*-test.js']
+          }
+        }
+
+        ,watch: {
             scripts: {
                 files: file_list,
-                tasks: ['jshint'],
+                tasks: ['jshint', 'vows'],
                 options: {
                     spawn: false
                     ,interrupt: true
@@ -51,9 +60,10 @@ module.exports = function(grunt) {
     // Load tasks
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-vows');
 
     // Default task(s).
-    grunt.registerTask('default', ['jshint']);
+    grunt.registerTask('default', ['jshint', 'vows']);
 
     // On file change only run jshint on the changed file not the whole thing
     grunt.event.on('watch', function(action, filepath) {
