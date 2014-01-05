@@ -6,12 +6,12 @@ Echos also comes with a client that allows you to send an echo request to a serv
 
 Installation
 ============
-Local  
+####Local
 ``` bash
 $ npm install echos
 ```
 
-Global  
+####Global
 ``` bash
 $ npm install -g echos
 ```
