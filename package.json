@@ -1,7 +1,7 @@
 {
   "name": "echos",
   "preferGlobal": "true",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple echo server and client.",
   "author": "Rafael Corral <me@rafaelcorral.com>",
   "main": "./lib/echos.js",
