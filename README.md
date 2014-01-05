@@ -1,4 +1,4 @@
-echos
+echos [![Build Status](https://secure.travis-ci.org/rcorral/node-echos.png)](http://travis-ci.org/rcorral/node-echos)
 =====
 
 Echos is a simple echo server and client. More specifically, echos allows you to setup an echo server that will replay any text sent to it.
