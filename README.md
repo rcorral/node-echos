@@ -37,7 +37,7 @@ Client
       -t, --timestamp  [default: false]
 
 Example
-=======
+-------
 
 Running the server on port ``1337``  
 ```
@@ -60,6 +60,27 @@ Echo message received:
 After the client receives the echo response from the server it will log out something like this:  
 ```
 Hello World! time=7ms
+```
+
+Usage – As a module
+===================
+
+Initialize
+----------
+```
+var echos = require('echos');
+```
+
+Create server
+-------------
+```
+echos.server.start({port: 1337, quiet: false});
+```
+
+Send echo from client
+---------------------
+```
+echos.client.echo('Hello World!', {port: 1337, timestamp: true});
 ```
 
 Run in development

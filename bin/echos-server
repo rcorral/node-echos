@@ -13,7 +13,7 @@ var net = require('net')
   ,argv = optimist.argv
   ,port = argv.p
   ,quiet = argv.q
-  ,server = require('../lib/echos.js').server
+  ,server = require('../lib/echos').server
   ;
 
 if (parseInt(port, 10).toString() === 'NaN') {

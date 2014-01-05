@@ -13,7 +13,7 @@ var optimist = require('optimist')
   ,port = argv.p
   ,timestamp = argv.t
   ,host = argv.h
-  ,client = require('../lib/echos.js').client
+  ,client = require('../lib/echos').client
   ;
 
 if (message === undefined || message.length === 0 || parseInt(port, 10).toString() === 'NaN') {
