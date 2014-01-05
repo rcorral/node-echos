@@ -4,14 +4,17 @@ echos
 Echos is a simple echo server and client. More specifically, echos allows you to setup an echo server that will replay any text sent to it.
 Echos also comes with a client that allows you to send an echo request to a server, and it will print it back.
 
-Requirements
-------------
-1. Install node and npm
-2. Install grunt-cli - http://gruntjs.com/getting-started
+Installation
+============
+Local  
+``` bash
+$ npm install echos
+```
 
-Install package requirements
-----------------------------
-1. Run ``npm install`` in the root of the repo
+Global  
+``` bash
+$ npm install -g echos
+```
 
 Usage – Command line
 ====================
@@ -85,6 +88,15 @@ echos.client.echo('Hello World!', {port: 1337, timestamp: true, callback: functi
 
 Run in development
 ==================
+
+Requirements
+------------
+1. Install node and npm
+2. Install grunt-cli - http://gruntjs.com/getting-started
+
+Install package requirements
+----------------------------
+1. Run ``npm install`` in the root of the repo
 
 Watch for file changes, run grunt from the root of the repo  
 ``` bash
