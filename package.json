@@ -1,25 +1,30 @@
 {
   "name": "echos",
-  "version": "0.1.0",
+  "preferGlobal": "true",
+  "version": "0.0.1",
   "description": "A simple echo server and client.",
-  "main": "index.js",
+  "author": "Rafael Corral <me@rafaelcorral.com>",
+  "main": "./lib/echos.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/rcorral/echos.git"
+    "url": "git://github.com/rcorral/node-echos.git"
+  },
+  "bin": {
+    "echos": "./bin/echos",
+    "echos-server": "./bin/echos-server",
+    "echos-client": "./bin/echos-client"
   },
   "keywords": [
     "echo",
-    "server",
-    "client"
+    "echo server",
+    "echo client"
   ],
-  "author": "Rafael Corral",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rcorral/echos/issues"
+    "url": "https://github.com/rcorral/node-echos/issues"
   },
   "dependencies": {
     "optimist": "~0.6.0"

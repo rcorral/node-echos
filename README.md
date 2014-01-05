@@ -13,13 +13,14 @@ Install package requirements
 ----------------------------
 1. Run ``npm install`` in the root of the repo
 
-Usage
-=====
+Usage – Command line
+====================
 
 Server
 ------
 
-    Usage: node ./server.js -p,--port <port> -q,--quiet
+    Usage: ./echos server -p,--port <port> -q,--quiet
+    Usage: ./echos-server -p,--port <port> -q,--quiet
 
     Options:
       -p, --port   [default: 1024]
@@ -27,7 +28,8 @@ Server
 
 Client
 ------
-    Usage: node ./client.js message -p,--port <port> -h,--host <host>
+    Usage: ./echos client message -p,--port <port> -h,--host <host>
+    Usage: ./echos-client message -p,--port <port> -h,--host <host>
 
     Options:
       -p, --port       [default: 1024]
@@ -39,15 +41,15 @@ Example
 
 Running the server on port ``1337``  
 ```
-node server.js -p 1337
+./bin/echos server -p 1337
 ```
 
 Run the client to connect to the server on port ``1337`` and send ``Hello World!``  
 ```
-node client.js Hello World! -p 1337 -t
+./bin/echos client Hello World! -p 1337 -t
 ```
 
-When the server receives an echo request from the client it will log out something like this:
+When the server receives an echo request from the client it will log out something like this:  
 ```
 Echo message received:
     Hello World!

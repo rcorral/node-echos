@@ -3,6 +3,7 @@ module.exports = function(grunt) {
 
     var file_list =  [
         '**/*.js'
+        ,'bin/*'
         ,'!node_modules/**/*.js'
     ];
 

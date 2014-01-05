@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+'use strict';
+
+// Declare vars
+var optimist = require('optimist')
+    .usage('Usage: '+ (process.argv[1].match(/echos$/) ? './echos client' : './echos-client') +' message -p,--port <port> -h,--host <host>')
+    .options('p', {alias: 'port', default: 1024})
+    .options('h', {alias: 'host', default: '127.0.0.1'})
+    .options('t', {alias: 'timestamp', default: false})
+  ,argv = optimist.argv
+  ,message = argv._.join(' ')
+  ,port = argv.p
+  ,timestamp = argv.t
+  ,host = argv.h
+  ,client = require('../lib/echos.js').client
+  ;
+
+if (message === undefined || message.length === 0 || parseInt(port, 10).toString() === 'NaN') {
+  console.log('Invalid usage.');
+  optimist.showHelp();
+  return;
+}
+
+client.echo(message, {port: port, host: host, timestamp: timestamp});

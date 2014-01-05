@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+'use strict';
+ 
+// Declare vars
+var net = require('net')
+  ,server = net.createServer()
+  // Setup and get arguments
+  ,optimist = require('optimist')
+    .usage('Usage: '+ (process.argv[1].match(/echos$/) ? './echos server' : './echos-server') +' -p,--port <port> -q,--quiet')
+    .options('p', {alias: 'port', default: 1024})
+    .options('q', {alias: 'quiet', default: false})
+  ,argv = optimist.argv
+  ,port = argv.p
+  ,quiet = argv.q
+  ,server = require('../lib/echos.js').server
+  ;
+
+if (parseInt(port, 10).toString() === 'NaN') {
+  optimist.showHelp();
+  return;
+}
+
+server.start({port: port, quiet: quiet});
