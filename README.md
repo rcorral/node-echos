@@ -40,12 +40,12 @@ Example
 -------
 
 Running the server on port ``1337``  
-```
+``` bash
 ./bin/echos server -p 1337
 ```
 
 Run the client to connect to the server on port ``1337`` and send ``Hello World!``  
-```
+``` bash
 ./bin/echos client Hello World! -p 1337 -t
 ```
 
@@ -67,20 +67,20 @@ Usage – As a module
 
 Initialize
 ----------
-```
+``` js
 var echos = require('echos');
 ```
 
 Create server
 -------------
-```
-echos.server.start({port: 1337, quiet: false});
+``` js
+echos.server.start({port: 1337, quiet: false, callback: function(data) {console.log(data);}});
 ```
 
 Send echo from client
 ---------------------
-```
-echos.client.echo('Hello World!', {port: 1337, timestamp: true});
+``` js
+echos.client.echo('Hello World!', {port: 1337, timestamp: true, callback: function(data) {console.log(data);}});
 ```
 
 Run in development
@@ -90,3 +90,11 @@ Watch for file changes, run grunt from the root of the repo
 ```
 grunt watch
 ```
+
+Run Tests
+=========
+``` bash
+  $ npm test
+```
+
+#### License: MIT
