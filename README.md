@@ -87,7 +87,7 @@ Run in development
 ==================
 
 Watch for file changes, run grunt from the root of the repo  
-```
+``` bash
 $ grunt watch
 ```
 
@@ -96,5 +96,3 @@ Run Tests
 ``` bash
 $ npm test
 ```
-
-#### License: MIT
